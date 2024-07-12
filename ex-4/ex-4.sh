@@ -1,0 +1,1 @@
+docker run -it -d -v ./:/data --name my-volume-container alpine
