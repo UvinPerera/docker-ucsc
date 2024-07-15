@@ -1,0 +1,15 @@
+version: '1.0'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - my_postgres_db
+
+  my_postgres_db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
